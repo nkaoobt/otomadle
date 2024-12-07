@@ -2134,21 +2134,26 @@
         check_color(element, answer, count) {
           var cElement = element.value;
           var cAnswer = this.answer;
-          var changed = [0, 0, 0, 0, 0];
+          var changedGreen = [0, 0, 0, 0, 0];
+          var changedYellow = [0, 0, 0, 0, 0];
           for (var i = 0; i < 5; i++) {
             if (cElement[i] == cAnswer[i]) {
-              //パネルを緑にする
-              document.getElementById('panel' + (i + count)).style.backgroundColor = 'limegreen';
-              changed.splice(i, 1, 1);
+              changedGreen.splice(i, 1, 1);
             }
           }
           for (var i = 0; i < 5; i++) {
             for (var j = 0; j < 5; j++) {
-              if (cElement[i] == cAnswer[j] && changed[j] == 0) {
+              if (cElement[i] == cAnswer[j] && changedYellow[j] + changedGreen[j] == 0) {
                 //パネルを黄色にする
                 document.getElementById('panel' + (i + count)).style.backgroundColor = 'yellow';
-                changed.splice(j, 1, 1);
+                changedYellow.splice(j, 1, 1);
               }
+            }
+          }
+          for (var i = 0; i < 5; i++) {
+            if (changedGreen[i] == 1) {
+              //パネルを緑にする
+              document.getElementById('panel' + (i + count)).style.backgroundColor = 'limegreen';
             }
           }
         }
