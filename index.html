@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Kosugi');
+
+    body {
+      font-family: 'Kosugi', sans-serif;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <v-app-bar app>
+        <v-app-bar-title style="width: 100%;">
+          <div style="width: 100%;">Otomadle</div>
+        </v-app-bar-title>
+      </v-app-bar>
+
+      <v-main>
+        <v-form v-model="valid">
+          <v-container style="display: flex;">
+            <v-col cols="12" md="5">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel0" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[0]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel1" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[1]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel2" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[2]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel3" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[3]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel4" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[4]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="5" style="margin-left: auto;">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel25" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[25]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel26" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[26]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel27" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[27]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel28" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[28]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel29" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[29]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+          </v-container>
+          <v-container style="display: flex;">
+            <v-col cols="12" md="5">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel5" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[5]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel6" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[6]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel7" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[7]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel8" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[8]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel9" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[9]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="5" style="margin-left: auto;">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel30" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[30]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel31" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[31]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel32" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[32]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel33" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[33]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel34" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[34]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+          </v-container>
+          <v-container style="display: flex;">
+            <v-col cols="12" md="5">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel10" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[10]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel11" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[11]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel12" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[12]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel13" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[13]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel14" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[14]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="5" style="margin-left: auto;">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel35" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[35]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel36" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[36]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel37" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[37]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel38" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[38]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel39" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[39]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+          </v-container>
+          <v-container style="display: flex;">
+            <v-col cols="12" md="5">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel15" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[15]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel16" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[16]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel17" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[17]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel18" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[18]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel19" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[19]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="5" style="margin-left: auto;">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel40" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[40]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel41" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[41]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel42" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[42]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel43" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[43]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel44" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[44]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+          </v-container>
+          <v-container style="display: flex;">
+            <v-col cols="12" md="5">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel20" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[20]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel21" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[21]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel22" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[22]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel23" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[23]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel24" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[24]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="5" style="margin-left: auto;">
+              <v-row row="6" style="height: 100px;">
+                <v-card elevation="16" id="panel45" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[45]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel46" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[46]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel47" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[47]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel48" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[48]}}</div>
+                </v-card>
+                <v-card elevation="16" id="panel49" text="..." style="width: 100px; height: 100%; margin-right: auto;">
+                  <div style="font-size: 75px; text-align: center; vertical-align: middle;">{{str[49]}}</div>
+                </v-card>
+              </v-row>
+            </v-col>
+          </v-container>
+
+        </v-form>
+        <v-form v-model="valid" style="margin-top: 100px;">
+          <v-container>
+            <v-col cols="12" md="2" style="margin: 0 auto; display: flex;">
+              <v-text-field counter="5" maxlength="5" id="answer"
+                onkeypress="if(event.keyCode==13){event.returnValue=false}"></v-text-field>
+              <v-btn v-on:click="clickBtn(count);">
+                回答
+              </v-btn>
+            </v-col>
+          </v-container>
+        </v-form>
+        <div style="display: none;">{{count}}</div>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data() {
+        return {
+          str: [],
+          count: 0,
+          clear: false,
+          answer: null,
+          otomadlist: [
+            {
+              "name": "あああああ"
+            },
+            {
+              "name": "あああああ"
+            },
+            {
+              "name": "あーいぇい"
+            },
+            {
+              "name": "あーかいぶ"
+            },
+            {
+              "name": "ああしんど"
+            },
+            {
+              "name": "あいうえお"
+            },
+            {
+              "name": "あいむりー"
+            },
+            {
+              "name": "あえんさん"
+            },
+            {
+              "name": "あおきーる"
+            },
+            {
+              "name": "あおらいん"
+            },
+            {
+              "name": "あかいいぬ"
+            },
+            {
+              "name": "あかめがね"
+            },
+            {
+              "name": "あかんもん"
+            },
+            {
+              "name": "あきざかな"
+            },
+            {
+              "name": "あきすはん"
+            },
+            {
+              "name": "あきふらー"
+            },
+            {
+              "name": "あぎりぎり"
+            },
+            {
+              "name": "あくしぇら"
+            },
+            {
+              "name": "あくじゅん"
+            },
+            {
+              "name": "あさなまら"
+            },
+            {
+              "name": "あさんだー"
+            },
+            {
+              "name": "あすなっつ"
+            },
+            {
+              "name": "あずまうど"
+            },
+            {
+              "name": "あずまぐろ"
+            },
+            {
+              "name": "あずりーの"
+            },
+            {
+              "name": "あたたかみ"
+            },
+            {
+              "name": "あどえくす"
+            },
+            {
+              "name": "あとみどり"
+            },
+            {
+              "name": "あなごさん"
+            },
+            {
+              "name": "あのにます"
+            },
+            {
+              "name": "あのにます"
+            },
+            {
+              "name": "あばじゃん"
+            },
+            {
+              "name": "あはははは"
+            },
+            {
+              "name": "あぶらあげ"
+            },
+            {
+              "name": "あぶらむし"
+            },
+            {
+              "name": "あまちゃん"
+            },
+            {
+              "name": "あまりもの"
+            },
+            {
+              "name": "あみうじき"
+            },
+            {
+              "name": "あみやさん"
+            },
+            {
+              "name": "あめふらし"
+            },
+            {
+              "name": "あめぼうず"
+            },
+            {
+              "name": "あめんどう"
+            },
+            {
+              "name": "あやさとり"
+            },
+            {
+              "name": "ありがとう"
+            },
+            {
+              "name": "あるきょー"
+            },
+            {
+              "name": "あるでんて"
+            },
+            {
+              "name": "あるぱいん"
+            },
+            {
+              "name": "あるばどん"
+            },
+            {
+              "name": "あるまいと"
+            },
+            {
+              "name": "あんくらげ"
+            },
+            {
+              "name": "あんだんて"
+            },
+            {
+              "name": "あんりしど"
+            },
+            {
+              "name": "いいいいい"
+            },
+            {
+              "name": "いかちゃん"
+            },
+            {
+              "name": "いかのあし"
+            },
+            {
+              "name": "いきてるの"
+            },
+            {
+              "name": "いせうどん"
+            },
+            {
+              "name": "いそかまい"
+            },
+            {
+              "name": "いっちゃん"
+            },
+            {
+              "name": "いっとかん"
+            },
+            {
+              "name": "いとでんわ"
+            },
+            {
+              "name": "いひつつす"
+            },
+            {
+              "name": "いもけんぴ"
+            },
+            {
+              "name": "いもけんぴ"
+            },
+            {
+              "name": "いやしあめ"
+            },
+            {
+              "name": "いわれなき"
+            },
+            {
+              "name": "ういにゃん"
+            },
+            {
+              "name": "うぇいまん"
+            },
+            {
+              "name": "うえそばん"
+            },
+            {
+              "name": "うためんま"
+            },
+            {
+              "name": "うっざーわ"
+            },
+            {
+              "name": "うまんちゅ"
+            },
+            {
+              "name": "うみへすろ"
+            },
+            {
+              "name": "うめこんぶ"
+            },
+            {
+              "name": "うるちーだ"
+            },
+            {
+              "name": "うるてぃま"
+            },
+            {
+              "name": "うるへーす"
+            },
+            {
+              "name": "うんこくん"
+            },
+            {
+              "name": "うんこっこ"
+            },
+            {
+              "name": "うんこまん"
+            },
+            {
+              "name": "うんちっち"
+            },
+            {
+              "name": "えあまちゃ"
+            },
+            {
+              "name": "えーてなー"
+            },
+            {
+              "name": "えたのーる"
+            },
+            {
+              "name": "えびうまい"
+            },
+            {
+              "name": "えふらいと"
+            },
+            {
+              "name": "えぺろんち"
+            },
+            {
+              "name": "えむりっと"
+            },
+            {
+              "name": "えるめてい"
+            },
+            {
+              "name": "えろげねこ"
+            },
+            {
+              "name": "おうめばし"
+            },
+            {
+              "name": "おおきなし"
+            },
+            {
+              "name": "おーしゃん"
+            },
+            {
+              "name": "おーちゃん"
+            },
+            {
+              "name": "おがさわら"
+            },
+            {
+              "name": "おきあがり"
+            },
+            {
+              "name": "おこたんぺ"
+            },
+            {
+              "name": "おすいもの"
+            },
+            {
+              "name": "おすかるふ"
+            },
+            {
+              "name": "おすしすし"
+            },
+            {
+              "name": "おせんべい"
+            },
+            {
+              "name": "おたこぷー"
+            },
+            {
+              "name": "おちゃのも"
+            },
+            {
+              "name": "おっちゃん"
+            },
+            {
+              "name": "おとみしん"
+            },
+            {
+              "name": "おとりすと"
+            },
+            {
+              "name": "おにぎらず"
+            },
+            {
+              "name": "おぴょぴょ"
+            },
+            {
+              "name": "おぽんぽん"
+            },
+            {
+              "name": "おもちんぐ"
+            },
+            {
+              "name": "おやくそく"
+            },
+            {
+              "name": "おらじろう"
+            },
+            {
+              "name": "おらりーぬ"
+            },
+            {
+              "name": "おらりーぬ"
+            },
+            {
+              "name": "おりょりょ"
+            },
+            {
+              "name": "おんちゃん"
+            },
+            {
+              "name": "おんなのこ"
+            },
+            {
+              "name": "かーれっじ"
+            },
+            {
+              "name": "かえるさま"
+            },
+            {
+              "name": "かきつばた"
+            },
+            {
+              "name": "かくのすけ"
+            },
+            {
+              "name": "がけのした"
+            },
+            {
+              "name": "かげむしゃ"
+            },
+            {
+              "name": "かざみどり"
+            },
+            {
+              "name": "かしおぺあ"
+            },
+            {
+              "name": "かしゅまろ"
+            },
+            {
+              "name": "かしわもち"
+            },
+            {
+              "name": "かずふらい"
+            },
+            {
+              "name": "かずぽんず"
+            },
+            {
+              "name": "かだっきー"
+            },
+            {
+              "name": "がっとれー"
+            },
+            {
+              "name": "がとちゃん"
+            },
+            {
+              "name": "かなしばり"
+            },
+            {
+              "name": "がなっしゅ"
+            },
+            {
+              "name": "かふぇおれ"
+            },
+            {
+              "name": "かふちーの"
+            },
+            {
+              "name": "かぶとしむ"
+            },
+            {
+              "name": "かぶとばぐ"
+            },
+            {
+              "name": "かみがわら"
+            },
+            {
+              "name": "かむいざえ"
+            },
+            {
+              "name": "かめあたま"
+            },
+            {
+              "name": "かめごはん"
+            },
+            {
+              "name": "かめちゃん"
+            },
+            {
+              "name": "からすまる"
+            },
+            {
+              "name": "かりんとう"
+            },
+            {
+              "name": "かれをばな"
+            },
+            {
+              "name": "かろらいん"
+            },
+            {
+              "name": "がんたんく"
+            },
+            {
+              "name": "かんちゅう"
+            },
+            {
+              "name": "きくのはな"
+            },
+            {
+              "name": "きこうまる"
+            },
+            {
+              "name": "きたすざか"
+            },
+            {
+              "name": "きつねそば"
+            },
+            {
+              "name": "きのととり"
+            },
+            {
+              "name": "きめてない"
+            },
+            {
+              "name": "きゃりまそ"
+            },
+            {
+              "name": "きゃりもふ"
+            },
+            {
+              "name": "きゅーせん"
+            },
+            {
+              "name": "きゅーみぅ"
+            },
+            {
+              "name": "きょーしま"
+            },
+            {
+              "name": "きりまぐち"
+            },
+            {
+              "name": "きろわっと"
+            },
+            {
+              "name": "きんぐむー"
+            },
+            {
+              "name": "ぎんめっき"
+            },
+            {
+              "name": "くずぶくろ"
+            },
+            {
+              "name": "ぐっさまん"
+            },
+            {
+              "name": "くらうだー"
+            },
+            {
+              "name": "くらうでぃ"
+            },
+            {
+              "name": "ぐらにゅー"
+            },
+            {
+              "name": "ぐらびちー"
+            },
+            {
+              "name": "くれがしら"
+            },
+            {
+              "name": "ぐれごーる"
+            },
+            {
+              "name": "くろぱんだ"
+            },
+            {
+              "name": "くろまぐろ"
+            },
+            {
+              "name": "くろみうむ"
+            },
+            {
+              "name": "ぐんぐにろ"
+            },
+            {
+              "name": "けすろっぷ"
+            },
+            {
+              "name": "けちゃっぷ"
+            },
+            {
+              "name": "けにさぼう"
+            },
+            {
+              "name": "けろちゃん"
+            },
+            {
+              "name": "けろっぷす"
+            },
+            {
+              "name": "げんどうじ"
+            },
+            {
+              "name": "けんにょう"
+            },
+            {
+              "name": "けんにょう"
+            },
+            {
+              "name": "こうたみず"
+            },
+            {
+              "name": "ごがくゆう"
+            },
+            {
+              "name": "こがねいお"
+            },
+            {
+              "name": "こちにんは"
+            },
+            {
+              "name": "こっちゃん"
+            },
+            {
+              "name": "こなぱんだ"
+            },
+            {
+              "name": "このやろう"
+            },
+            {
+              "name": "こばんねこ"
+            },
+            {
+              "name": "こまーちか"
+            },
+            {
+              "name": "ごまだんご"
+            },
+            {
+              "name": "こまつぶり"
+            },
+            {
+              "name": "こめうるち"
+            },
+            {
+              "name": "ごめーとる"
+            },
+            {
+              "name": "こめっちょ"
+            },
+            {
+              "name": "こんにゃく"
+            },
+            {
+              "name": "こんばっと"
+            },
+            {
+              "name": "さぁーもん"
+            },
+            {
+              "name": "さいかんだ"
+            },
+            {
+              "name": "さいとうみ"
+            },
+            {
+              "name": "さいらいん"
+            },
+            {
+              "name": "さいりゅう"
+            },
+            {
+              "name": "さがみはら"
+            },
+            {
+              "name": "さがみりく"
+            },
+            {
+              "name": "さがりうむ"
+            },
+            {
+              "name": "さがわさん"
+            },
+            {
+              "name": "さくたろう"
+            },
+            {
+              "name": "さくっちゃ"
+            },
+            {
+              "name": "さくっちょ"
+            },
+            {
+              "name": "さくらもち"
+            },
+            {
+              "name": "さくりゅう"
+            },
+            {
+              "name": "ささきさち"
+            },
+            {
+              "name": "さしすせそ"
+            },
+            {
+              "name": "さしゃまる"
+            },
+            {
+              "name": "さたなはま"
+            },
+            {
+              "name": "さとうなな"
+            },
+            {
+              "name": "さはらさば"
+            },
+            {
+              "name": "さぶまいと"
+            },
+            {
+              "name": "さむげまん"
+            },
+            {
+              "name": "さむらぁい"
+            },
+            {
+              "name": "さやしんご"
+            },
+            {
+              "name": "さやちゃそ"
+            },
+            {
+              "name": "ざるうどん"
+            },
+            {
+              "name": "さるながら"
+            },
+            {
+              "name": "さんでぃー"
+            },
+            {
+              "name": "じーどっと"
+            },
+            {
+              "name": "しぇいぶり"
+            },
+            {
+              "name": "じぇふぁむ"
+            },
+            {
+              "name": "しおすーぷ"
+            },
+            {
+              "name": "じぐぬーま"
+            },
+            {
+              "name": "しげどうま"
+            },
+            {
+              "name": "ししゃぱい"
+            },
+            {
+              "name": "じすみっく"
+            },
+            {
+              "name": "しむしゅむ"
+            },
+            {
+              "name": "しもすがり"
+            },
+            {
+              "name": "じゃがいも"
+            },
+            {
+              "name": "じゃがいも"
+            },
+            {
+              "name": "じゃがまる"
+            },
+            {
+              "name": "じゃすみん"
+            },
+            {
+              "name": "じゃぱにぃ"
+            },
+            {
+              "name": "しゃみちか"
+            },
+            {
+              "name": "しゃんはい"
+            },
+            {
+              "name": "しゃんぽん"
+            },
+            {
+              "name": "しゅーえん"
+            },
+            {
+              "name": "しゅうまい"
+            },
+            {
+              "name": "しゅばいぬ"
+            },
+            {
+              "name": "じゅぴたあ"
+            },
+            {
+              "name": "じゅまんう"
+            },
+            {
+              "name": "しゅんてい"
+            },
+            {
+              "name": "じゅんぺい"
+            },
+            {
+              "name": "じょーかー"
+            },
+            {
+              "name": "じょーすけ"
+            },
+            {
+              "name": "しょーちん"
+            },
+            {
+              "name": "じょかさん"
+            },
+            {
+              "name": "しょくにく"
+            },
+            {
+              "name": "しょこらむ"
+            },
+            {
+              "name": "しょぼぼん"
+            },
+            {
+              "name": "しろいねこ"
+            },
+            {
+              "name": "しろぎつね"
+            },
+            {
+              "name": "しろくーま"
+            },
+            {
+              "name": "しろくじら"
+            },
+            {
+              "name": "しろにゃん"
+            },
+            {
+              "name": "しろりんご"
+            },
+            {
+              "name": "しんちゃん"
+            },
+            {
+              "name": "じんましん"
+            },
+            {
+              "name": "すずがおか"
+            },
+            {
+              "name": "すとえっと"
+            },
+            {
+              "name": "すなぼこり"
+            },
+            {
+              "name": "ずぬちゃん"
+            },
+            {
+              "name": "すぱいきー"
+            },
+            {
+              "name": "ずんだもち"
+            },
+            {
+              "name": "せさみぃる"
+            },
+            {
+              "name": "ぜそぐせぎ"
+            },
+            {
+              "name": "ぜろりあん"
+            },
+            {
+              "name": "そうぶだい"
+            },
+            {
+              "name": "そぐりっど"
+            },
+            {
+              "name": "そにちらす"
+            },
+            {
+              "name": "ぞのみぴぃ"
+            },
+            {
+              "name": "そふぃあん"
+            },
+            {
+              "name": "そふぃあん"
+            },
+            {
+              "name": "そむちょん"
+            },
+            {
+              "name": "そんみょん"
+            },
+            {
+              "name": "だいちまる"
+            },
+            {
+              "name": "たいちゃん"
+            },
+            {
+              "name": "たかはしぃ"
+            },
+            {
+              "name": "たくぽんぬ"
+            },
+            {
+              "name": "たけちゃん"
+            },
+            {
+              "name": "たけとんぼ"
+            },
+            {
+              "name": "たこーちき"
+            },
+            {
+              "name": "たこちゃん"
+            },
+            {
+              "name": "たしろさん"
+            },
+            {
+              "name": "たたたたた"
+            },
+            {
+              "name": "だっきゅう"
+            },
+            {
+              "name": "たつたずき"
+            },
+            {
+              "name": "たっつぁん"
+            },
+            {
+              "name": "たっぷりん"
+            },
+            {
+              "name": "たつまずき"
+            },
+            {
+              "name": "たてっさん"
+            },
+            {
+              "name": "たにたけし"
+            },
+            {
+              "name": "たぬぽんた"
+            },
+            {
+              "name": "たまちゃん"
+            },
+            {
+              "name": "たまらない"
+            },
+            {
+              "name": "たまりっこ"
+            },
+            {
+              "name": "たもひょー"
+            },
+            {
+              "name": "たらちのき"
+            },
+            {
+              "name": "たりせつな"
+            },
+            {
+              "name": "だるしんど"
+            },
+            {
+              "name": "たるもっと"
+            },
+            {
+              "name": "だれかさん"
+            },
+            {
+              "name": "だれかさん"
+            },
+            {
+              "name": "たろりあん"
+            },
+            {
+              "name": "たんざんじ"
+            },
+            {
+              "name": "たんばりん"
+            },
+            {
+              "name": "ちぃちゃん"
+            },
+            {
+              "name": "ちくでんち"
+            },
+            {
+              "name": "ちゃばしら"
+            },
+            {
+              "name": "ちゃらぽこ"
+            },
+            {
+              "name": "ちゃんたま"
+            },
+            {
+              "name": "ちゃんてつ"
+            },
+            {
+              "name": "ちゃんぽん"
+            },
+            {
+              "name": "ちゃんみお"
+            },
+            {
+              "name": "ちゅうとく"
+            },
+            {
+              "name": "ちゅうめぐ"
+            },
+            {
+              "name": "ぢゆてぃま"
+            },
+            {
+              "name": "ちゅるちん"
+            },
+            {
+              "name": "ちょこいか"
+            },
+            {
+              "name": "ちょこぱん"
+            },
+            {
+              "name": "ちょこらて"
+            },
+            {
+              "name": "ちょのゆし"
+            },
+            {
+              "name": "ちょろざこ"
+            },
+            {
+              "name": "ちょんまげ"
+            },
+            {
+              "name": "ちんたまん"
+            },
+            {
+              "name": "つーじゅん"
+            },
+            {
+              "name": "つーちゃん"
+            },
+            {
+              "name": "つかれびと"
+            },
+            {
+              "name": "つきしろう"
+            },
+            {
+              "name": "つづらおり"
+            },
+            {
+              "name": "つなようじ"
+            },
+            {
+              "name": "つまようじ"
+            },
+            {
+              "name": "つんぽっぽ"
+            },
+            {
+              "name": "ていしんぐ"
+            },
+            {
+              "name": "でぃなしふ"
+            },
+            {
+              "name": "てーきてき"
+            },
+            {
+              "name": "でかいいか"
+            },
+            {
+              "name": "でこちゃん"
+            },
+            {
+              "name": "てつきゆう"
+            },
+            {
+              "name": "てってれー"
+            },
+            {
+              "name": "てとりしゅ"
+            },
+            {
+              "name": "てるあらい"
+            },
+            {
+              "name": "でんきゅう"
+            },
+            {
+              "name": "てんでるあ"
+            },
+            {
+              "name": "とぅいんご"
+            },
+            {
+              "name": "とぅかぽん"
+            },
+            {
+              "name": "とうげいし"
+            },
+            {
+              "name": "とーとうみ"
+            },
+            {
+              "name": "とおのくん"
+            },
+            {
+              "name": "ときえのき"
+            },
+            {
+              "name": "ところてん"
+            },
+            {
+              "name": "どせいくん"
+            },
+            {
+              "name": "どせいさん"
+            },
+            {
+              "name": "どたんばん"
+            },
+            {
+              "name": "とてもすき"
+            },
+            {
+              "name": "とぶひつじ"
+            },
+            {
+              "name": "とぷんろぷ"
+            },
+            {
+              "name": "とまとまと"
+            },
+            {
+              "name": "とまりんご"
+            },
+            {
+              "name": "とむっきぃ"
+            },
+            {
+              "name": "とめっくす"
+            },
+            {
+              "name": "ともたろう"
+            },
+            {
+              "name": "とらまーる"
+            },
+            {
+              "name": "とりのえさ"
+            },
+            {
+              "name": "どりりたん"
+            },
+            {
+              "name": "どるいだむ"
+            },
+            {
+              "name": "どるたろう"
+            },
+            {
+              "name": "とろろどん"
+            },
+            {
+              "name": "どんたくん"
+            },
+            {
+              "name": "なあああん"
+            },
+            {
+              "name": "なかがわら"
+            },
+            {
+              "name": "なかっちょ"
+            },
+            {
+              "name": "なきつばき"
+            },
+            {
+              "name": "なぎないず"
+            },
+            {
+              "name": "なごぬっか"
+            },
+            {
+              "name": "なたでここ"
+            },
+            {
+              "name": "なたでここ"
+            },
+            {
+              "name": "なたねここ"
+            },
+            {
+              "name": "なっちゃん"
+            },
+            {
+              "name": "ななななめ"
+            },
+            {
+              "name": "ななななも"
+            },
+            {
+              "name": "なまこっこ"
+            },
+            {
+              "name": "なまこもの"
+            },
+            {
+              "name": "なるひさん"
+            },
+            {
+              "name": "なんじょー"
+            },
+            {
+              "name": "なんぞこれ"
+            },
+            {
+              "name": "なんでぞー"
+            },
+            {
+              "name": "にくうどん"
+            },
+            {
+              "name": "にこえもん"
+            },
+            {
+              "name": "にじぅやき"
+            },
+            {
+              "name": "にじさんじ"
+            },
+            {
+              "name": "にしゃまね"
+            },
+            {
+              "name": "にとりずむ"
+            },
+            {
+              "name": "にものさん"
+            },
+            {
+              "name": "にもるえら"
+            },
+            {
+              "name": "にゃふさん"
+            },
+            {
+              "name": "にゃんける"
+            },
+            {
+              "name": "にゃんたま"
+            },
+            {
+              "name": "にゃんぱな"
+            },
+            {
+              "name": "にゃんふぅ"
+            },
+            {
+              "name": "ぬちょすけ"
+            },
+            {
+              "name": "ぬのさらし"
+            },
+            {
+              "name": "ねうぃばー"
+            },
+            {
+              "name": "ねがふらい"
+            },
+            {
+              "name": "ねぎばたけ"
+            },
+            {
+              "name": "ねこじろう"
+            },
+            {
+              "name": "ねこみかん"
+            },
+            {
+              "name": "ねこもどき"
+            },
+            {
+              "name": "ねてたひと"
+            },
+            {
+              "name": "ねふぇると"
+            },
+            {
+              "name": "ねむりごな"
+            },
+            {
+              "name": "のいれーん"
+            },
+            {
+              "name": "のうりゅう"
+            },
+            {
+              "name": "のすのもの"
+            },
+            {
+              "name": "のりぽっと"
+            },
+            {
+              "name": "のりまきん"
+            },
+            {
+              "name": "ばーこーど"
+            },
+            {
+              "name": "ぱーらいと"
+            },
+            {
+              "name": "はいちゅー"
+            },
+            {
+              "name": "はいにゃす"
+            },
+            {
+              "name": "ぱいらいと"
+            },
+            {
+              "name": "ぱきすたん"
+            },
+            {
+              "name": "ばぐたっと"
+            },
+            {
+              "name": "ばくとーる"
+            },
+            {
+              "name": "はぐれえむ"
+            },
+            {
+              "name": "はげもやし"
+            },
+            {
+              "name": "はたまくろ"
+            },
+            {
+              "name": "はつがつお"
+            },
+            {
+              "name": "ばとじっぷ"
+            },
+            {
+              "name": "ばとるぬこ"
+            },
+            {
+              "name": "はなうさぎ"
+            },
+            {
+              "name": "はなたらし"
+            },
+            {
+              "name": "ばねきなこ"
+            },
+            {
+              "name": "ぱぱぱぱん"
+            },
+            {
+              "name": "はまがいじ"
+            },
+            {
+              "name": "はまやらわ"
+            },
+            {
+              "name": "はらみちる"
+            },
+            {
+              "name": "はりねずみ"
+            },
+            {
+              "name": "ばるむんく"
+            },
+            {
+              "name": "ぱるめじぃ"
+            },
+            {
+              "name": "はんだこて"
+            },
+            {
+              "name": "はんだごて"
+            },
+            {
+              "name": "はんぱもん"
+            },
+            {
+              "name": "ばんぶれら"
+            },
+            {
+              "name": "ぴーちゅま"
+            },
+            {
+              "name": "びーはんた"
+            },
+            {
+              "name": "びえんかん"
+            },
+            {
+              "name": "ぴこきゅう"
+            },
+            {
+              "name": "ぴすたちお"
+            },
+            {
+              "name": "ひたなこう"
+            },
+            {
+              "name": "ひでちゃん"
+            },
+            {
+              "name": "ひとあそび"
+            },
+            {
+              "name": "ひとばしら"
+            },
+            {
+              "name": "ひょうせつ"
+            },
+            {
+              "name": "びょーじん"
+            },
+            {
+              "name": "ひょろりん"
+            },
+            {
+              "name": "ひらせがわ"
+            },
+            {
+              "name": "ひらぴーと"
+            },
+            {
+              "name": "ひろちゃん"
+            },
+            {
+              "name": "ぴろてぃす"
+            },
+            {
+              "name": "びんちょー"
+            },
+            {
+              "name": "ふぁんくま"
+            },
+            {
+              "name": "ふぃでかな"
+            },
+            {
+              "name": "ふぃにきー"
+            },
+            {
+              "name": "ふぃらせむ"
+            },
+            {
+              "name": "ぷーちゃん"
+            },
+            {
+              "name": "ぶーにゃん"
+            },
+            {
+              "name": "ぶーむくん"
+            },
+            {
+              "name": "ふぇのめる"
+            },
+            {
+              "name": "ふさきです"
+            },
+            {
+              "name": "ふざけんな"
+            },
+            {
+              "name": "ふじみさん"
+            },
+            {
+              "name": "ふっくさん"
+            },
+            {
+              "name": "ふにゃらか"
+            },
+            {
+              "name": "ふらいぱん"
+            },
+            {
+              "name": "ふらちるの"
+            },
+            {
+              "name": "ぶらっきい"
+            },
+            {
+              "name": "ぶらっしゅ"
+            },
+            {
+              "name": "ぶらっちぇ"
+            },
+            {
+              "name": "ふらのじん"
+            },
+            {
+              "name": "ふらぴびえ"
+            },
+            {
+              "name": "ふるしうに"
+            },
+            {
+              "name": "ぶるどらー"
+            },
+            {
+              "name": "ぷろきおん"
+            },
+            {
+              "name": "ふろれんす"
+            },
+            {
+              "name": "へいしゅー"
+            },
+            {
+              "name": "べうぼーい"
+            },
+            {
+              "name": "べーころん"
+            },
+            {
+              "name": "へすてぃあ"
+            },
+            {
+              "name": "へちまじん"
+            },
+            {
+              "name": "へぢゃこふ"
+            },
+            {
+              "name": "べとちゃん"
+            },
+            {
+              "name": "へのへのへ"
+            },
+            {
+              "name": "べるせるべ"
+            },
+            {
+              "name": "ぺるちぇそ"
+            },
+            {
+              "name": "ぽいじょん"
+            },
+            {
+              "name": "ほいっぷま"
+            },
+            {
+              "name": "ほうみどん"
+            },
+            {
+              "name": "ぽこちゃん"
+            },
+            {
+              "name": "ぽこなっつ"
+            },
+            {
+              "name": "ぽたれもん"
+            },
+            {
+              "name": "ぽちさんっ"
+            },
+            {
+              "name": "ほてぃあき"
+            },
+            {
+              "name": "ぽてぃすと"
+            },
+            {
+              "name": "ぽてむーん"
+            },
+            {
+              "name": "ほねとかげ"
+            },
+            {
+              "name": "ぽんぴどぅ"
+            },
+            {
+              "name": "まーごらす"
+            },
+            {
+              "name": "まーちゃん"
+            },
+            {
+              "name": "まいかぐら"
+            },
+            {
+              "name": "まいはーふ"
+            },
+            {
+              "name": "まぐろかん"
+            },
+            {
+              "name": "まじまっち"
+            },
+            {
+              "name": "ましゅまろ"
+            },
+            {
+              "name": "ますぼっと"
+            },
+            {
+              "name": "またさくら"
+            },
+            {
+              "name": "まだよわい"
+            },
+            {
+              "name": "まっすぅー"
+            },
+            {
+              "name": "まっちゃる"
+            },
+            {
+              "name": "まっちゃん"
+            },
+            {
+              "name": "まっつぁん"
+            },
+            {
+              "name": "まぬるねこ"
+            },
+            {
+              "name": "まみちゃん"
+            },
+            {
+              "name": "まりおくん"
+            },
+            {
+              "name": "まるきゅー"
+            },
+            {
+              "name": "まるたろう"
+            },
+            {
+              "name": "まんじゅー"
+            },
+            {
+              "name": "まんじゅう"
+            },
+            {
+              "name": "まんじゅう"
+            },
+            {
+              "name": "まんじゅう"
+            },
+            {
+              "name": "まんぷてぃ"
+            },
+            {
+              "name": "みかんばこ"
+            },
+            {
+              "name": "みずあおい"
+            },
+            {
+              "name": "みずしーた"
+            },
+            {
+              "name": "みそさざい"
+            },
+            {
+              "name": "みっちゃん"
+            },
+            {
+              "name": "みどりゑす"
+            },
+            {
+              "name": "みのもんた"
+            },
+            {
+              "name": "みゃんまー"
+            },
+            {
+              "name": "みれくらげ"
+            },
+            {
+              "name": "むぎちょこ"
+            },
+            {
+              "name": "めさめーさ"
+            },
+            {
+              "name": "めたるあれ"
+            },
+            {
+              "name": "めもりーの"
+            },
+            {
+              "name": "めるくりあ"
+            },
+            {
+              "name": "めんたいこ"
+            },
+            {
+              "name": "めんまとめ"
+            },
+            {
+              "name": "もうひとつ"
+            },
+            {
+              "name": "もーしょん"
+            },
+            {
+              "name": "もちうさぎ"
+            },
+            {
+              "name": "もちかえり"
+            },
+            {
+              "name": "もちのすけ"
+            },
+            {
+              "name": "もちれーと"
+            },
+            {
+              "name": "もちわらび"
+            },
+            {
+              "name": "もっちゃん"
+            },
+            {
+              "name": "もっちゃん"
+            },
+            {
+              "name": "もどらない"
+            },
+            {
+              "name": "もにゃんぼ"
+            },
+            {
+              "name": "ものとーん"
+            },
+            {
+              "name": "もふみょん"
+            },
+            {
+              "name": "もみじばし"
+            },
+            {
+              "name": "もんじゃら"
+            },
+            {
+              "name": "やきひよこ"
+            },
+            {
+              "name": "やきゅうり"
+            },
+            {
+              "name": "やきゅせい"
+            },
+            {
+              "name": "やくもさん"
+            },
+            {
+              "name": "やじゅまん"
+            },
+            {
+              "name": "やちぼうず"
+            },
+            {
+              "name": "やまおとこ"
+            },
+            {
+              "name": "ゆあーねす"
+            },
+            {
+              "name": "ゆーきゃん"
+            },
+            {
+              "name": "ゆーちゃそ"
+            },
+            {
+              "name": "ゆーりゃん"
+            },
+            {
+              "name": "ゆきたろう"
+            },
+            {
+              "name": "ゆきたんぉ"
+            },
+            {
+              "name": "ゆずてぃー"
+            },
+            {
+              "name": "ゆっけりん"
+            },
+            {
+              "name": "ゆでだぬき"
+            },
+            {
+              "name": "ゆりがおか"
+            },
+            {
+              "name": "ゆりかもめ"
+            },
+            {
+              "name": "ゆりちゃん"
+            },
+            {
+              "name": "ゆりめろん"
+            },
+            {
+              "name": "よーむいん"
+            },
+            {
+              "name": "よめっぴー"
+            },
+            {
+              "name": "よんじゅん"
+            },
+            {
+              "name": "らいすたあ"
+            },
+            {
+              "name": "らいんとん"
+            },
+            {
+              "name": "らりめろん"
+            },
+            {
+              "name": "らりるれー"
+            },
+            {
+              "name": "らりるれろ"
+            },
+            {
+              "name": "らるとらる"
+            },
+            {
+              "name": "らんちゃん"
+            },
+            {
+              "name": "らんちゃん"
+            },
+            {
+              "name": "らんぺいじ"
+            },
+            {
+              "name": "りあちくん"
+            },
+            {
+              "name": "りつかっと"
+            },
+            {
+              "name": "りゅーはる"
+            },
+            {
+              "name": "りゅうへい"
+            },
+            {
+              "name": "りゅんつね"
+            },
+            {
+              "name": "れあこいる"
+            },
+            {
+              "name": "れいすたー"
+            },
+            {
+              "name": "れいわずし"
+            },
+            {
+              "name": "れじすたー"
+            },
+            {
+              "name": "れのれーの"
+            },
+            {
+              "name": "れぶろーす"
+            },
+            {
+              "name": "ろおしょん"
+            },
+            {
+              "name": "ろんぐねぎ"
+            },
+            {
+              "name": "わいふぁい"
+            },
+            {
+              "name": "わかめそば"
+            },
+            {
+              "name": "わたけわた"
+            },
+            {
+              "name": "わっくれあ"
+            },
+            {
+              "name": "わなびむし"
+            },
+            {
+              "name": "わらびもち"
+            },
+            {
+              "name": "ゑゐしゃあ"
+            },
+            {
+              "name": "ゑゐちゃん"
+            }
+          ]
+        }
+      },
+      mounted: function () {
+        num = this.otomadlist.length;
+        answerNum = Math.floor(Math.random() * (num));
+        this.answer = this.otomadlist[answerNum].name;
+      },
+      methods: {
+        clickBtn(count) {
+          let element = document.getElementById('answer');
+          if (element.value.length == 5 && !(this.clear)) {
+            for (var i = count, j = 0; i < count + 5; i++, j++) {
+              this.str[i] = element.value[j];
+            }
+            this.count += 5;
+            this.check_clear(count, element);
+          }
+        },
+        check_clear(count, element) {
+          var answer = this.answer;
+          if (element.value == answer) {
+            alert("正解！");
+            this.check_color(element, answer, count);
+            this.clear = true;
+          } else {
+            if (count == 45) {
+              alert("不正解");
+              alert("正解は " + answer);
+            } else {
+              this.check_color(element, answer, count);
+            }
+          }
+        },
+        check_color(element, answer, count) {
+          var cElement = element.value;
+          var cAnswer = this.answer;
+          var changed = [0, 0, 0, 0, 0];
+          for (var i = 0; i < 5; i++) {
+            if (cElement[i] == cAnswer[i]) {
+              //パネルを緑にする
+              document.getElementById('panel' + (i + count)).style.backgroundColor = 'limegreen';
+              changed.splice(i, 1, 1);
+            }
+          }
+          for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+              if (cElement[i] == cAnswer[j] && changed[j] == 0) {
+                //パネルを黄色にする
+                document.getElementById('panel' + (i + count)).style.backgroundColor = 'yellow';
+                changed.splice(j, 1, 1);
+              }
+            }
+          }
+        }
+      }
+    })
+  </script>
+  <script>
+    $(function () {
+      $('v-text-field').keypress(function (e) {
+        if (e.which == 13) {
+          return false;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
